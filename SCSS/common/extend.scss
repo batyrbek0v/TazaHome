@@ -60,6 +60,13 @@
   color: $color-green;
 }
 
+%extend-titlee {
+  font-family: 'Rubik Spray Paint', cursive;
+  font-weight: 400;
+  font-size: 48px;
+  color: $color-DBlue;
+}
+
 %extend-text {
   font-size: 24px;
   font-weight: 600;

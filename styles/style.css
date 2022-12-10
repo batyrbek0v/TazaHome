@@ -28,7 +28,7 @@ a {
   align-items: center;
 }
 
-.general-container .client-container .client-container-img-block, .general-container .client-container {
+.general-container .advantage-container .advantage-img-wrapper, .general-container .client-container .client-container-img-block, .general-container .client-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -59,7 +59,14 @@ a {
   color: #96C22B;
 }
 
-.general-container .client-container .client-container-content p, .header-banner-container .banner-content-mobile p, .header-banner-container .banner-content p {
+.general-container .advantage-container .title {
+  font-family: "Rubik Spray Paint", cursive;
+  font-weight: 400;
+  font-size: 48px;
+  color: #203E86;
+}
+
+.general-container .advantage-container .advantage-img-wrapper .advantage-block p, .general-container .client-container .client-container-content p, .header-banner-container .banner-content-mobile p, .header-banner-container .banner-content p {
   font-size: 24px;
   font-weight: 600;
   color: #4F4F4F;
@@ -373,7 +380,7 @@ body {
 }
 @media (max-width: 897px) {
   .general-container .client-container {
-    height: 100%;
+    height: auto;
     flex-direction: column;
     padding: 0 1rem;
   }
@@ -397,7 +404,7 @@ body {
 }
 @media (max-width: 450px) {
   .general-container .client-container .client-container-img-block {
-    height: 288px;
+    height: 100%;
   }
 }
 .general-container .client-container .client-container-img-block .img-block-inner {
@@ -416,7 +423,7 @@ body {
 }
 @media (max-width: 450px) {
   .general-container .client-container .client-container-img-block .img-block-inner {
-    height: auto;
+    height: 100%;
   }
 }
 .general-container .client-container .client-container-img-block .img-block-inner img {
@@ -432,11 +439,6 @@ body {
   }
 }
 @media (max-width: 897px) {
-  .general-container .client-container .client-container-content {
-    margin-top: 40px;
-  }
-}
-@media (max-width: 450px) {
   .general-container .client-container .client-container-content {
     margin-top: 40px;
   }
@@ -462,8 +464,74 @@ body {
 @media (max-width: 376px) {
   .general-container .client-container .client-container-content p {
     font-size: 18px;
-    margin-top: 12px;
   }
+}
+.general-container .advantage-container {
+  width: 100%;
+  margin-top: 80px;
+}
+@media (max-width: 1100px) {
+  .general-container .advantage-container {
+    padding: 0 1rem;
+  }
+}
+.general-container .advantage-container .title {
+  text-align: center;
+}
+@media (max-width: 450px) {
+  .general-container .advantage-container .title {
+    font-size: 28px;
+  }
+}
+.general-container .advantage-container .advantage-img-wrapper {
+  width: 1098px;
+  height: 341px;
+  margin: 48px auto 0 auto;
+}
+@media (max-width: 1100px) {
+  .general-container .advantage-container .advantage-img-wrapper {
+    flex-wrap: wrap;
+    width: auto;
+  }
+}
+@media (max-width: 768px) {
+  .general-container .advantage-container .advantage-img-wrapper {
+    gap: 16px;
+  }
+}
+@media (max-width: 522px) {
+  .general-container .advantage-container .advantage-img-wrapper {
+    height: auto;
+    justify-content: center;
+    gap: 32px 16px;
+  }
+}
+.general-container .advantage-container .advantage-img-wrapper .advantage-block {
+  width: auto;
+  height: 295px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.general-container .advantage-container .advantage-img-wrapper .advantage-block .advantage-img-block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 230px;
+}
+.general-container .advantage-container .advantage-img-wrapper .advantage-block .advantage-img-block img {
+  width: 100%;
+  height: auto;
+}
+.general-container .advantage-container .advantage-img-wrapper .advantage-block .advantage-img-block img:nth-child(2) {
+  position: absolute;
+  width: 108px;
+  height: 108px;
+  z-index: 2;
 }
 
 /*# sourceMappingURL=style.css.map */
