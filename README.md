@@ -3,4 +3,4 @@
 
 <h5>Link to site ⬇️</h5>
 
-<a href="tazahome.netlify.app">tazahome.netlify.app</a>
+<a href="https://tazahome.netlify.app/">tazahome.netlify.app</a>
