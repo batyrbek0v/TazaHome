@@ -1,0 +1,53 @@
+// FLEX-BOX
+%extend-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%extend-flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+%extend-flex-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+// BUTTONS-AND-INPUTS
+%extend-button {
+  height: 48px;
+  font-size: 24px;
+  font-weight: 600;
+  background: $color-DBlue;
+  color: white;
+  padding: 10px 37px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+%extend-form-button {
+  width: 245px;
+  // height: 64px;
+  font-size: 24px;
+  font-weight: 600;
+  background: $color-green;
+  color: white;
+  padding: 14px 53px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+%extend-form-input {
+  width: auto;
+  color: $color-grey;
+  padding: 14px 27px;
+  border: 2px solid $color-green;
+  border-radius: 20px;
+}
