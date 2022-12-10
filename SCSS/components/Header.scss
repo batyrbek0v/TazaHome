@@ -2,11 +2,12 @@
 
 body {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: url('../../assets/img/main-background.png')no-repeat;
 
   @media (max-width:450px) {
     background: url('../../assets/img/mobile-background.png')no-repeat;
+    height: 100%;
   }
 }
 
@@ -154,6 +155,20 @@ body {
   @extend %extend-flex-around;
   margin-top: 60px;
 
+  @media (max-width:1025px) {
+    padding: 0 2rem;
+  }
+
+  @media (max-width:860px) {
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 40px;
+  }
+
+  @media (max-width:450px) {
+    padding: 0 1rem;
+  }
+
   .banner-content {
     width: 625px;
     height: 387px;
@@ -163,11 +178,28 @@ body {
     text-align: center;
     gap: 66px;
 
+    @media (max-width:860px) {
+      height: auto;
+    }
+
+    @media (max-width:571px) {
+      width: auto;
+    }
+
+
     h1 {
       font-family: 'Rubik Spray Paint', cursive;
       font-weight: 100;
       font-size: 74px;
       color: $color-green;
+
+      @media (max-width:571px) {
+        font-size: 54px;
+      }
+
+      @media (max-width:376px) {
+        font-size: 38px;
+      }
     }
 
     p {
@@ -175,11 +207,18 @@ body {
       font-weight: 600;
       color: #4F4F4F;
 
+      @media (max-width:860px) {
+        display: none;
+      }
+
+
+
       span {
         font-size: 48px;
         color: $color-LBlue;
         font-family: 'Rubik Spray Paint', cursive;
         font-weight: 400;
+        margin: 0 12px;
       }
     }
   }
@@ -189,11 +228,100 @@ body {
     display: flex;
     align-items: flex-start;
 
+    @media (max-width:450px) {
+      width: 100%;
+    }
+
+    @media (max-width:860px) {
+      height: 400px;
+    }
+
+    @media (max-width:450px) {
+      width: auto;
+      height: 245px;
+    }
+
+    .banner-boy {
+      @media (max-width:860px) {
+        height: 100%;
+      }
+
+      @media (max-width:450px) {
+        width: 200px;
+      }
+    }
+
     .garbage {
       height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
+
+      @media (max-width:450px) {
+        width: 52px;
+
+      }
+
+      img {
+        @media (max-width:860px) {
+          height: 30%;
+        }
+
+        @media (max-width:450px) {
+          width: 100%;
+          height: 74px;
+        }
+
+      }
+
+    }
+  }
+
+  .banner-content-mobile {
+    @extend %extend-flex-center;
+    display: none;
+
+    @media (max-width:860px) {
+      flex-direction: column;
+      display: flex;
+      text-align: center;
+    }
+
+    p {
+      font-size: 24px;
+      font-weight: 600;
+      color: #4F4F4F;
+
+      @media (max-width:376px) {
+        font-size: 18px;
+      }
+
+      span {
+        font-size: 48px;
+        color: $color-LBlue;
+        font-family: 'Rubik Spray Paint', cursive;
+        font-weight: 400;
+        margin: 0 12px;
+
+        @media (max-width:571px) {
+          font-size: 38px;
+        }
+
+        @media (max-width:376px) {
+          font-size: 28px;
+        }
+      }
+    }
+
+    .banner-content-mobile-btn {
+      @extend %extend-button;
+      @extend %extend-flex-center;
+      margin-top: 40px;
+
+      @media (max-width:376px) {
+        border-radius: 14px;
+        font-size: 18px;
+      }
     }
   }
 }
