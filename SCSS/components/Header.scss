@@ -188,10 +188,7 @@ body {
 
 
     h1 {
-      font-family: 'Rubik Spray Paint', cursive;
-      font-weight: 100;
-      font-size: 74px;
-      color: $color-green;
+      @extend %extend-title;
 
       @media (max-width:571px) {
         font-size: 54px;
@@ -203,21 +200,16 @@ body {
     }
 
     p {
-      font-size: 24px;
-      font-weight: 600;
-      color: #4F4F4F;
+      @extend %extend-text;
 
       @media (max-width:860px) {
         display: none;
       }
 
-
-
       span {
+        @extend %extend-title;
         font-size: 48px;
         color: $color-LBlue;
-        font-family: 'Rubik Spray Paint', cursive;
-        font-weight: 400;
         margin: 0 12px;
       }
     }
@@ -288,19 +280,16 @@ body {
     }
 
     p {
-      font-size: 24px;
-      font-weight: 600;
-      color: #4F4F4F;
+      @extend %extend-text;
 
       @media (max-width:376px) {
         font-size: 18px;
       }
 
       span {
+        @extend %extend-title;
         font-size: 48px;
         color: $color-LBlue;
-        font-family: 'Rubik Spray Paint', cursive;
-        font-weight: 400;
         margin: 0 12px;
 
         @media (max-width:571px) {
