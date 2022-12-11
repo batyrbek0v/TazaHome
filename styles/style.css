@@ -22,21 +22,27 @@ a {
   text-decoration: none;
 }
 
-.general-container .form-container .form-container-inner .form-block, .header-banner-container .banner-content-mobile .banner-content-mobile-btn, .header-banner-container .banner-content-mobile {
+.form-container .overley .confirmed .confirmed-img, .form-container .form-container-inner .form-block, .header-banner-container .banner-content-mobile .banner-content-mobile-btn, .header-banner-container .banner-content-mobile {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.general-container .advantage-container .advantage-img-wrapper, .general-container .client-container .client-container-img-block, .general-container .client-container {
+.footer-container, .general-container .advantage-container .advantage-img-wrapper, .general-container .client-container .client-container-img-block, .general-container .client-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.general-container .form-container .form-container-inner, .header-banner-container, .nav .nav-list, .nav {
+.form-container .form-container-inner, .header-banner-container, .nav .nav-list, .nav {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+}
+
+.form-container .overley .confirmed {
+  display: flex;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -56,7 +62,7 @@ a {
   opacity: 0.7;
 }
 
-.general-container .form-container .form-container-inner .form-block .form button {
+.form-container .form-container-inner .form-block .form button {
   width: 245px;
   font-size: 24px;
   font-weight: 600;
@@ -68,11 +74,11 @@ a {
   cursor: pointer;
   transition: 0.3s;
 }
-.general-container .form-container .form-container-inner .form-block .form button:hover {
+.form-container .form-container-inner .form-block .form button:hover {
   opacity: 0.7;
 }
 
-.general-container .form-container .form-container-inner .form-block .form textarea, .general-container .form-container .form-container-inner .form-block .form input {
+.form-container .form-container-inner .form-block .form textarea, .form-container .form-container-inner .form-block .form input {
   width: auto;
   color: #828282;
   padding: 14px 27px;
@@ -81,7 +87,7 @@ a {
   outline-color: lightgreen;
   background: rgba(255, 255, 255, 0.432);
 }
-.general-container .form-container .form-container-inner .form-block .form textarea::placeholder, .general-container .form-container .form-container-inner .form-block .form input::placeholder {
+.form-container .form-container-inner .form-block .form textarea::placeholder, .form-container .form-container-inner .form-block .form input::placeholder {
   color: #828282;
 }
 
@@ -99,7 +105,7 @@ a {
   color: #203E86;
 }
 
-.general-container .form-container p, .general-container .about-container .about-content p, .general-container .advantage-container .advantage-img-wrapper .advantage-block p, .general-container .client-container .client-container-content p, .header-banner-container .banner-content-mobile p, .header-banner-container .banner-content p {
+.form-container p, .general-container .contact-container p, .general-container .about-container .about-content p, .general-container .advantage-container .advantage-img-wrapper .advantage-block p, .general-container .client-container .client-container-content p, .header-banner-container .banner-content-mobile p, .header-banner-container .banner-content p, .nav .nav-list li a {
   font-size: 24px;
   font-weight: 600;
   color: #4F4F4F;
@@ -164,8 +170,6 @@ body {
 }
 .nav .nav-list li a {
   color: #203E86;
-  font-size: 24px;
-  font-weight: 600;
   transition: 0.1s;
 }
 .nav .nav-list li a:hover {
@@ -556,6 +560,7 @@ body {
   align-items: center;
   width: 100%;
   height: 230px;
+  cursor: pointer;
 }
 .general-container .advantage-container .advantage-img-wrapper .advantage-block .advantage-img-block img {
   width: 100%;
@@ -667,7 +672,42 @@ body {
     font-size: 16px;
   }
 }
-.general-container .form-container {
+.general-container .contact-container {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 450px) {
+  .general-container .contact-container {
+    gap: 12px;
+  }
+}
+.general-container .contact-container .contact-social-block {
+  display: flex;
+  gap: 60px;
+  margin-top: 29px;
+}
+@media (max-width: 376px) {
+  .general-container .contact-container .contact-social-block {
+    gap: 40px;
+  }
+}
+.general-container .contact-container p {
+  color: #282828;
+}
+@media (max-width: 450px) {
+  .general-container .contact-container p {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  .general-container .contact-container p:last-child {
+    margin-top: 0;
+  }
+}
+
+.form-container {
   width: 100%;
   padding-right: 49px;
   margin-top: 80px;
@@ -675,49 +715,49 @@ body {
   flex-direction: column;
 }
 @media (max-width: 769px) {
-  .general-container .form-container {
+  .form-container {
     padding: 0 1rem;
   }
 }
-.general-container .form-container p {
+.form-container p {
   margin-top: 29px;
   text-align: center;
 }
 @media (max-width: 425px) {
-  .general-container .form-container p {
+  .form-container p {
     font-size: 16px;
   }
 }
-.general-container .form-container .form-container-inner {
+.form-container .form-container-inner {
   margin-top: 80px;
   align-items: center;
 }
 @media (max-width: 1036px) {
-  .general-container .form-container .form-container-inner {
+  .form-container .form-container-inner {
     flex-direction: column;
     margin-top: 40px;
   }
 }
 @media (max-width: 660px) {
-  .general-container .form-container .form-container-inner {
+  .form-container .form-container-inner {
     justify-content: center;
   }
 }
-.general-container .form-container .form-container-inner .form-block {
+.form-container .form-container-inner .form-block {
   width: 478px;
   height: 565px;
 }
 @media (max-width: 769px) {
-  .general-container .form-container .form-container-inner .form-block {
+  .form-container .form-container-inner .form-block {
     width: 90%;
   }
 }
 @media (max-width: 425px) {
-  .general-container .form-container .form-container-inner .form-block {
+  .form-container .form-container-inner .form-block {
     height: auto;
   }
 }
-.general-container .form-container .form-container-inner .form-block .form {
+.form-container .form-container-inner .form-block .form {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -725,14 +765,14 @@ body {
   gap: 33px;
 }
 @media (max-width: 321px) {
-  .general-container .form-container .form-container-inner .form-block .form {
+  .form-container .form-container-inner .form-block .form {
     align-items: center;
   }
 }
-.general-container .form-container .form-container-inner .form-block .form input {
+.form-container .form-container-inner .form-block .form input {
   width: 100%;
 }
-.general-container .form-container .form-container-inner .form-block .form textarea {
+.form-container .form-container-inner .form-block .form textarea {
   min-width: 100%;
   min-height: 100px;
   height: 265px;
@@ -740,55 +780,149 @@ body {
   max-height: 265px;
 }
 @media (max-width: 769px) {
-  .general-container .form-container .form-container-inner .form-block .form textarea {
+  .form-container .form-container-inner .form-block .form textarea {
     width: 100%;
   }
 }
 @media (max-width: 426px) {
-  .general-container .form-container .form-container-inner .form-block .form textarea {
+  .form-container .form-container-inner .form-block .form textarea {
     height: 160px;
   }
 }
 @media (max-width: 426px) {
-  .general-container .form-container .form-container-inner .form-block .form button {
+  .form-container .form-container-inner .form-block .form button {
     height: 44px;
     padding: 0;
     border-radius: 14px;
   }
 }
-.general-container .form-container .form-container-inner .form-right {
+.form-container .form-container-inner .form-right {
   position: relative;
   width: 510px;
   height: 482px;
 }
 @media (max-width: 1036px) {
-  .general-container .form-container .form-container-inner .form-right {
+  .form-container .form-container-inner .form-right {
     margin-top: 20px;
   }
 }
 @media (max-width: 769px) {
-  .general-container .form-container .form-container-inner .form-right {
+  .form-container .form-container-inner .form-right {
     width: 266px;
     display: flex;
     justify-content: center;
   }
 }
 @media (max-width: 540px) {
-  .general-container .form-container .form-container-inner .form-right {
+  .form-container .form-container-inner .form-right {
     width: 100%;
     height: 245px;
   }
 }
-.general-container .form-container .form-container-inner .form-right img {
+.form-container .form-container-inner .form-right img {
   position: absolute;
   top: 0;
 }
 @media (max-width: 540px) {
-  .general-container .form-container .form-container-inner .form-right img {
+  .form-container .form-container-inner .form-right img {
     width: 100%;
     height: 100%;
     object-fit: contain;
   }
+}
+.form-container .overley {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 40%;
+  left: 51%;
+  z-index: 99;
+}
+.form-container .overley.active {
+  width: 100vw;
+  height: 100vw;
+  backdrop-filter: blur(5px);
+  pointer-events: visible;
+  left: 0;
+  top: 0;
+}
+.form-container .overley.active .confirmed {
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+.form-container .overley .confirmed {
+  position: absolute;
+  width: 394px;
+  height: 322px;
+  flex-direction: column;
+  border-radius: 16px;
+  background: #203E86;
+  top: 20%;
+  gap: 27px;
+  transform: scale(0.1);
+  transition: 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+@media (max-width: 394px) {
+  .form-container .overley .confirmed {
+    width: 95%;
+  }
+}
+.form-container .overley .confirmed .confirmed-close {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  padding-right: 16px;
+}
+.form-container .overley .confirmed .confirmed-close img {
+  width: 36px;
+  cursor: pointer;
+}
+.form-container .overley .confirmed div p {
+  color: white;
+  font-family: "Rubik Spray Paint", cursive;
+  font-weight: 400;
+  margin-top: 0;
+}
+.form-container .overley .confirmed .confirmed-img {
+  flex-direction: column;
+  width: 99px;
+  height: 99px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.footer-container {
+  width: 100%;
+  height: 83px;
+  background: #203E86;
+  color: white;
+  padding: 0 4rem 0 2.5rem;
+  margin-top: 100px;
+}
+@media (max-width: 600px) {
+  .footer-container {
+    height: 63px;
+    padding: 0 1rem;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+  }
+}
+.footer-container .footer-logo {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+@media (max-width: 600px) {
+  .footer-container .footer-logo img {
+    display: none;
+  }
+}
+.footer-container p {
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=style.css.map */

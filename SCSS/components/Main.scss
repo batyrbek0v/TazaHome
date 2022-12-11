@@ -121,8 +121,6 @@
       padding: 0 1rem;
     }
 
-
-
     .advantage-img-wrapper {
       @extend %extend-flex-between;
       width: 1098px;
@@ -161,6 +159,7 @@
           align-items: center;
           width: 100%;
           height: 230px;
+          cursor: pointer;
 
           img {
             width: 100%;
@@ -282,132 +281,39 @@
 
   }
 
-
-  .form-container {
-    width: 100%;
-    padding-right: 49px;
-    margin-top: 80px;
+  .contact-container {
+    margin-top: 60px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 20px;
 
-    @media (max-width:769px) {
-      padding: 0 1rem;
+    @media (max-width:450px) {
+      gap: 12px;
+    }
+
+
+    .contact-social-block {
+      display: flex;
+      gap: 60px;
+      margin-top: 29px;
+
+      @media (max-width:376px) {
+        gap: 40px;
+      }
     }
 
     p {
       @extend %extend-text;
-      margin-top: 29px;
-      text-align: center;
+      @extend %extend-text;
+      color: $color-black;
 
-      @media (max-width:425px) {
-        font-size: 16px;
-      }
-    }
+      @media (max-width:450px) {
+        margin-top: 20px;
+        font-size: 18px;
 
-    .form-container-inner {
-      margin-top: 80px;
-      @extend %extend-flex-around;
-      align-items: center;
-
-      @media (max-width:1036px) {
-        flex-direction: column;
-        margin-top: 40px;
-      }
-
-      @media (max-width:660px) {
-        justify-content: center;
-      }
-
-      .form-block {
-        @extend %extend-flex-center;
-        width: 478px;
-        height: 565px;
-
-        @media (max-width:769px) {
-          width: 90%;
-        }
-
-        @media (max-width:425px) {
-          height: auto;
-        }
-
-        .form {
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-end;
-          gap: 33px;
-
-          @media (max-width:321px) {
-            align-items: center;
-          }
-
-          input {
-            @extend %extend-form-input;
-            width: 100%
-          }
-
-          textarea {
-            @extend %extend-form-input;
-            // width: 100%;
-            min-width: 100%;
-            min-height: 100px;
-            height: 265px;
-            max-width: 478px;
-            max-height: 265px;
-
-            @media (max-width:769px) {
-              width: 100%;
-            }
-
-            @media (max-width:426px) {
-              height: 160px;
-            }
-          }
-
-          button {
-            @extend %extend-form-button;
-
-            @media (max-width:426px) {
-              height: 44px;
-              padding: 0;
-              border-radius: 14px;
-            }
-          }
-        }
-
-      }
-
-      .form-right {
-        position: relative;
-        width: 510px;
-        height: 482px;
-
-        @media (max-width:1036px) {
-          margin-top: 20px;
-        }
-
-        @media (max-width:769px) {
-          width: 266px;
-          display: flex;
-          justify-content: center;
-        }
-
-        @media (max-width:540px) {
-          width: 100%;
-          height: 245px;
-
-        }
-
-        img {
-          position: absolute;
-          top: 0;
-
-          @media (max-width:540px) {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-          }
+        &:last-child {
+          margin-top: 0;
         }
       }
     }

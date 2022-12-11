@@ -57,9 +57,8 @@ body {
 
     li {
       a {
+        @extend %extend-text;
         color: $color-DBlue;
-        font-size: 24px;
-        font-weight: 600;
         transition: 0.1s;
 
         &:hover {
