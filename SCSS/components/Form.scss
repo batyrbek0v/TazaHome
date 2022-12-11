@@ -147,6 +147,10 @@
         transform: scale(1);
         opacity: 1;
         visibility: visible;
+
+        @media (max-width:426px) {
+          top: 50%;
+        }
       }
 
     }

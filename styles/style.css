@@ -851,6 +851,11 @@ body {
   opacity: 1;
   visibility: visible;
 }
+@media (max-width: 426px) {
+  .form-container .overley.active .confirmed {
+    top: 50%;
+  }
+}
 .form-container .overley .confirmed {
   position: absolute;
   width: 394px;
