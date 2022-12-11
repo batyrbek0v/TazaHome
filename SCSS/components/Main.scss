@@ -5,6 +5,15 @@
   flex-direction: column;
   margin-top: 80px;
 
+  .title {
+    text-align: center;
+    @extend %extend-titlee;
+
+    @media (max-width:450px) {
+      font-size: 28px;
+    }
+  }
+
   .client-container {
     width: 100%;
     height: 700px;
@@ -112,14 +121,7 @@
       padding: 0 1rem;
     }
 
-    .title {
-      text-align: center;
-      @extend %extend-titlee;
 
-      @media (max-width:450px) {
-        font-size: 28px;
-      }
-    }
 
     .advantage-img-wrapper {
       @extend %extend-flex-between;
@@ -134,6 +136,7 @@
 
       @media (max-width:768px) {
         gap: 16px;
+        height: auto;
       }
 
       @media (max-width:522px) {
@@ -174,6 +177,105 @@
 
         p {
           @extend %extend-text;
+        }
+      }
+    }
+  }
+
+  .about-container {
+    width: 100%;
+    height: 523px;
+    background: $color-LBlue;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2rem 0;
+    position: relative;
+
+    @media (max-width:768px) {
+      padding: 0;
+      justify-content: space-evenly;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 220px;
+      width: 220px;
+      left: -5%;
+      top: 0px;
+      background: url('../../assets/icons/garbage.svg') no-repeat;
+
+      @media (max-width:768px) {
+        width: 170px;
+        background-size: contain;
+      }
+
+      @media (max-width:450px) {
+        width: 120px;
+        left: -10%;
+        top: 20px;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 141px;
+      width: 130px;
+      right: 0px;
+      top: 73%;
+      background: url('../../assets/icons/house.svg') no-repeat;
+
+      @media (max-width:768px) {
+        width: 80px;
+        height: 100px;
+        background-size: contain;
+        top: 80%;
+      }
+
+      @media (max-width:376px) {
+        width: 60px;
+        height: 50px;
+        background-size: cover;
+        top: 90%;
+      }
+    }
+
+    .title {
+      color: $color-white;
+    }
+
+
+    .about-content {
+      width: 989px;
+      height: 162px;
+      margin: 0 auto;
+
+      @media (max-width:1200px) {
+        width: 700px;
+        height: auto;
+        word-wrap: break-word;
+      }
+
+      @media (max-width:700px) {
+        width: auto;
+        padding: 0 1rem;
+      }
+
+      p {
+        @extend %extend-text;
+        font-size: 20px;
+        color: white;
+
+        @media (max-width:450px) {
+          font-size: 18px;
+          text-align: justify;
+        }
+
+        @media (max-width:376px) {
+          font-size: 16px;
         }
       }
     }
