@@ -22,7 +22,7 @@ a {
   text-decoration: none;
 }
 
-.header-banner-container .banner-content-mobile .banner-content-mobile-btn, .header-banner-container .banner-content-mobile {
+.general-container .form-container .form-container-inner .form-block, .header-banner-container .banner-content-mobile .banner-content-mobile-btn, .header-banner-container .banner-content-mobile {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,7 +34,7 @@ a {
   align-items: center;
 }
 
-.header-banner-container, .nav .nav-list, .nav {
+.general-container .form-container .form-container-inner, .header-banner-container, .nav .nav-list, .nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -50,6 +50,39 @@ a {
   border: 1px solid transparent;
   border-radius: 20px;
   cursor: pointer;
+  transition: 0.3s;
+}
+.header-banner-container .banner-content-mobile .banner-content-mobile-btn:hover, .nav .nav-btn-block .nav-btn:hover {
+  opacity: 0.7;
+}
+
+.general-container .form-container .form-container-inner .form-block .form button {
+  width: 245px;
+  font-size: 24px;
+  font-weight: 600;
+  background: #96C22B;
+  color: white;
+  padding: 14px 53px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.general-container .form-container .form-container-inner .form-block .form button:hover {
+  opacity: 0.7;
+}
+
+.general-container .form-container .form-container-inner .form-block .form textarea, .general-container .form-container .form-container-inner .form-block .form input {
+  width: auto;
+  color: #828282;
+  padding: 14px 27px;
+  border: 2px solid #96C22B;
+  border-radius: 14px;
+  outline-color: lightgreen;
+  background: rgba(255, 255, 255, 0.432);
+}
+.general-container .form-container .form-container-inner .form-block .form textarea::placeholder, .general-container .form-container .form-container-inner .form-block .form input::placeholder {
+  color: #828282;
 }
 
 .general-container .client-container .client-container-content h2, .header-banner-container .banner-content-mobile p span, .header-banner-container .banner-content p span, .header-banner-container .banner-content h1 {
@@ -66,7 +99,7 @@ a {
   color: #203E86;
 }
 
-.general-container .about-container .about-content p, .general-container .advantage-container .advantage-img-wrapper .advantage-block p, .general-container .client-container .client-container-content p, .header-banner-container .banner-content-mobile p, .header-banner-container .banner-content p {
+.general-container .form-container p, .general-container .about-container .about-content p, .general-container .advantage-container .advantage-img-wrapper .advantage-block p, .general-container .client-container .client-container-content p, .header-banner-container .banner-content-mobile p, .header-banner-container .banner-content p {
   font-size: 24px;
   font-weight: 600;
   color: #4F4F4F;
@@ -632,6 +665,129 @@ body {
 @media (max-width: 376px) {
   .general-container .about-container .about-content p {
     font-size: 16px;
+  }
+}
+.general-container .form-container {
+  width: 100%;
+  padding-right: 49px;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 769px) {
+  .general-container .form-container {
+    padding: 0 1rem;
+  }
+}
+.general-container .form-container p {
+  margin-top: 29px;
+  text-align: center;
+}
+@media (max-width: 425px) {
+  .general-container .form-container p {
+    font-size: 16px;
+  }
+}
+.general-container .form-container .form-container-inner {
+  margin-top: 80px;
+  align-items: center;
+}
+@media (max-width: 1036px) {
+  .general-container .form-container .form-container-inner {
+    flex-direction: column;
+    margin-top: 40px;
+  }
+}
+@media (max-width: 660px) {
+  .general-container .form-container .form-container-inner {
+    justify-content: center;
+  }
+}
+.general-container .form-container .form-container-inner .form-block {
+  width: 478px;
+  height: 565px;
+}
+@media (max-width: 769px) {
+  .general-container .form-container .form-container-inner .form-block {
+    width: 90%;
+  }
+}
+@media (max-width: 425px) {
+  .general-container .form-container .form-container-inner .form-block {
+    height: auto;
+  }
+}
+.general-container .form-container .form-container-inner .form-block .form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 33px;
+}
+@media (max-width: 321px) {
+  .general-container .form-container .form-container-inner .form-block .form {
+    align-items: center;
+  }
+}
+.general-container .form-container .form-container-inner .form-block .form input {
+  width: 100%;
+}
+.general-container .form-container .form-container-inner .form-block .form textarea {
+  min-width: 100%;
+  min-height: 100px;
+  height: 265px;
+  max-width: 478px;
+  max-height: 265px;
+}
+@media (max-width: 769px) {
+  .general-container .form-container .form-container-inner .form-block .form textarea {
+    width: 100%;
+  }
+}
+@media (max-width: 426px) {
+  .general-container .form-container .form-container-inner .form-block .form textarea {
+    height: 160px;
+  }
+}
+@media (max-width: 426px) {
+  .general-container .form-container .form-container-inner .form-block .form button {
+    height: 44px;
+    padding: 0;
+    border-radius: 14px;
+  }
+}
+.general-container .form-container .form-container-inner .form-right {
+  position: relative;
+  width: 510px;
+  height: 482px;
+}
+@media (max-width: 1036px) {
+  .general-container .form-container .form-container-inner .form-right {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 769px) {
+  .general-container .form-container .form-container-inner .form-right {
+    width: 266px;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 540px) {
+  .general-container .form-container .form-container-inner .form-right {
+    width: 100%;
+    height: 245px;
+  }
+}
+.general-container .form-container .form-container-inner .form-right img {
+  position: absolute;
+  top: 0;
+}
+@media (max-width: 540px) {
+  .general-container .form-container .form-container-inner .form-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 }
 
